@@ -56,6 +56,14 @@
       ? img.style.display = 'none' 
       : img.style.display = 'block'
     })
+
+    const hideMobileImg = () => {
+      return window.innerWidth > minWidth 
+      ? img.style.display = 'none' 
+      : img.style.display = 'block'
+    }
+
+    hideMobileImg()
   </script>
 </body>
 </html>
