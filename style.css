@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-heading: "Fraunces", serif;
+  --ff-default: "Montserrat", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fs-400: 1rem;
+  --fs-500: 1.15rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2.5rem;
+  --fs-800: 3rem;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  background: var(--clr-cream);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-cyan);
+  margin-top: 1rem;
+  font-size: var(--fs-400);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:focus, .btn:hover {
+  background-color: #1A4031;
+}
+
+.product-component {
+  --border-radius: 1rem;
+  --padding: 2rem;
+  display: grid;
+  width: 95%;
+  background: var(--clr-white);
+  border-radius: var(--border-radius);
+  color: var(--clr-dark-grayish-blue);
+  margin: 2rem auto;
+}
+.product-component img {
+  border-radius: inherit;
+}
+
+@media (min-width: 600px) {
+  .product-component {
+    width: 46rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.product-image {
+  width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 600px) {
+  .product-image {
+    min-height: 100%;
+    background-image: url(images/image-product-desktop.jpg);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+}
+.product-summary {
+  padding: 2rem;
+}
+
+.product-name {
+  text-transform: uppercase;
+  font-size: var(--fs-400);
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.product-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-700);
+  color: var(--clr-very-dark-blue);
+  padding-bottom: 2rem;
+}
+
+.product-info .product-desc {
+  font-size: var(--fs-500);
+  padding-bottom: 2rem;
+  line-height: 1.5rem;
+}
+.product-info .product-price {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-700);
+  color: var(--clr-dark-cyan);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.product-info .product-price span {
+  color: var(--clr-dark-grayish-blue);
+  font-size: var(--fs-400);
+  padding-left: 2rem;
+}
+.product-info .product-price span::before {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 1.5px;
+  top: 50%;
+  background-color: var(--clr-dark-grayish-blue);
+}/*# sourceMappingURL=style.css.map */
